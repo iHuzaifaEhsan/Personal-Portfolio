@@ -1,0 +1,514 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgb(0, 0, 33);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* ______________________________NAVBAR__________________________________ */
+
+
+/* nav {
+    background-color: rgb(18, 18, 62);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    overflow: hidden;
+}
+
+.bignav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.bignav ul li {
+    list-style: none;
+
+}
+
+.bignav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 30px;
+}
+
+.bignav ul li a:hover {
+    background-color: rgb(170, 107, 228);
+    padding: 30px;
+    transition: 0.3s ease;
+}
+
+.line {
+    border: 0;
+    background-color: rgb(214, 194, 233);
+    height: 1.2px;
+    margin: 40px 84px;
+} */
+
+/* _______________________________Toggle NavBar__________________________ */
+
+
+
+
+
+
+
+
+
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+    width: 220px;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: white;
+
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: rgb(18, 18, 62);
+}
+
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    z-index: 2;
+
+
+    -webkit-touch-callout: none;
+}
+
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: rgb(18, 18, 62);
+}
+
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+#menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: rgb(170, 107, 228);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+
+#menuToggle input:checked~ul {
+    transform: none;
+}
+
+
+/* _______________________________HOME________________________________ */
+
+.firstSection {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.firstSection>div {
+    width: 30% 30% 30% 30%;
+}
+
+.leftSection {
+    font-size: 1.7rem;
+}
+
+.rightSection {
+    width: 34%;
+    margin: 40px 0;
+}
+
+.rightSection img {
+    width: 90%;
+
+}
+
+.purple {
+    color: rgb(170, 107, 228);
+}
+
+#element {
+    color: rgb(170, 107, 228);
+}
+
+.left {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.left:hover {
+    transform: scale(1.1);
+
+    transition: .4s;
+}
+
+#profilePic {
+
+
+    border: 2px solid rgb(170, 107, 228);
+    border-radius: 50%;
+}
+
+#profilePic:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+#more {
+    display: none;
+}
+
+.line {
+    border: 0;
+    background-color: rgb(214, 194, 233);
+    height: 1.2px;
+    margin: 100px 84px;
+}
+
+/* __________________________ABOUT US____________________________ */
+
+.heading {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.heading h1 {
+    max-width: 83vw;
+    font-size: 30px;
+    margin: auto;
+    color: white;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 30px auto;
+}
+
+.hero-content {
+    flex: 1;
+    width: 600px;
+    margin: 0px 25px;
+    animation: fadeInUp 2s ease;
+}
+
+.hero-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    color: #666;
+
+
+}
+
+.hero-content button {
+    display: inline-block;
+    background-color: rgb(170, 107, 228);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 77px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.hero-content button:hover {
+    transform: scale(1.1);
+}
+
+.hero-image {
+    flex: 1;
+    width: 600px;
+    margin: auto;
+}
+
+.hero-image .imag:hover {
+    transition: 0.3s ease;
+    transform: scale(1.1);
+}
+
+.imag {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    animation: fadeInRight 2s ease;
+}
+
+
+/* _______________________________Skills___________________________ */
+
+.skillsec {
+    display: flex;
+    justify-content: center;
+}
+
+.skillfill {
+
+    width: 550px;
+    background: rgb(0, 0, 33);
+    color: white;
+    border-radius: 10px;
+    padding: 15px 30px;
+}
+
+.skillfill h1 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.skillfill .skill {
+    margin-bottom: 30px;
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.skillfill .skill h3 {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.skillfill .skill h4 {
+    float: right;
+}
+
+.skillfill .skill .skill-bar {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 17px;
+    border-radius: 15px;
+    background: rgb(0, 0, 33);
+}
+
+.skillfill .skill .fill-bar {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    height: 17px;
+    border-radius: 15px;
+    background: rgb(170, 107, 228);
+}
+
+.skillfill .skill .html {
+    animation: html 2s;
+    width: 95%;
+}
+
+.skillfill .skill .css {
+    animation: css 2s;
+    width: 85%;
+}
+
+.skillfill .skill .javascript {
+    animation: javascript 2s;
+    width: 70%;
+}
+
+.skillfill .skill .php {
+    animation: php 2s;
+    width: 85%;
+}
+
+.skillfill .skill .react {
+    animation: react 2s;
+    width: 65%;
+}
+
+@keyframes html {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 95%;
+    }
+}
+
+@keyframes css {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 85%;
+    }
+}
+
+@keyframes javascript {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes php {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 85%;
+    }
+}
+
+@keyframes react {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 65%;
+    }
+}
+
+
+/* ________________________________FOOTER___________________________________ */
+footer {
+    background-color: rgb(0, 0, 33);
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    border-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: white;
+    opacity: 0.9;
+}
+
+
+
+.socialIcons a:hover i {
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+.footerBottom {
+    background-color: rgb(170, 107, 228);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+.designer {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
